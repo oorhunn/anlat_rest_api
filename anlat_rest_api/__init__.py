@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from anlat_rest_api.endpoints.index import Index
+from anlat_rest_api.endpoints.auth import Auth
 
 import datetime
 import os
@@ -13,4 +14,5 @@ api = Api(app)
 
 # print(app.config)
 api.add_resource(Index, '/')
+api.add_resource(Auth, '/auth')
 
